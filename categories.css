@@ -1,0 +1,21 @@
+#backborder {
+    z-index: 1;
+    background-color: #247BA0;
+    position: absolute;
+    top: 1px;
+    bottom: 510px;
+    left: 1px;
+    right: 1px;
+}
+#main {
+    z-index: 2;
+    background-color: #B2DBBF;
+    position: absolute;
+    top: 10px;
+    bottom: 500px;
+    left: 20px;
+    right: 20px;
+}
+#misc {
+    background-color: ;
+}
