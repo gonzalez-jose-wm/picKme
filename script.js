@@ -1,9 +1,13 @@
 $(document).ready(function() {
     setTimeout(function(){
-        $('#clientsDropDown #clientsDashboard').slideToggle(300);
-        $(this).toggleClass('clientsClose');
+        $('#clientsDashboard').slideToggle(800);
     }, 2000);
 
 
 
+
 });
+
+function submit () {
+    alert("HI")
+}

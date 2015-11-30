@@ -1,45 +1,16 @@
-#clientsDropDown {
-
-    width: 63px;
-    padding-bottom:2%;
-    position:absolute;
-    margin: auto;
-}
-
-#clientsOpen {
-    background: url("http://orig13.deviantart.net/7f67/f/2010/340/e/d/ipad_aired_leather_by_north385com-d34c8gj.jpg") no-repeat scroll 68px 10px #414142;
-    color: #ececec;
-    cursor: pointer;
-    float: left;
-    font-size: 26px;
-    margin: -2px 0 0 10%;
-    padding: 0 15px 2px;
-    text-decoration: none;
-    width: 63px;
-}
-
-#clientsCTA {
-    background:#414142;
-    width:100%;
+.clientsCTA {
     color: #CCCCCC;
     text-align:center;
     font-size: 46px;
-    margin: 0;
-    padding: 30px 0;
     text-decoration: none;
-
+    margin-top: 30px;
 }
 
-#clientsDropDown .clientsClose {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/2000px-Solid_blue.svg.png");
-}
 
-#clientsDropDown #clientsDashboard {
-    display: none;
-}
 #clientsDashboard {
     width: 600px;
     margin: auto;
-
+    background-color: darkslategray;
+    display: none;
 
 }
