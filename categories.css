@@ -1,21 +1,32 @@
 #backborder {
     z-index: 1;
     background-color: #247BA0;
-    position: absolute;
-    top: 1px;
+    position: fixed;
+    top: 0;
     bottom: 510px;
-    left: 1px;
-    right: 1px;
+    left: 0;
+    right: 0;
 }
 #main {
     z-index: 2;
     background-color: #B2DBBF;
-    position: absolute;
+    position: fixed;
     top: 10px;
-    bottom: 500px;
+    bottom: 530px;
     left: 20px;
     right: 20px;
+    border-radius: 20px;
 }
 #misc {
     background-color: ;
+}
+#changeCat {
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+select {
+    padding: 10px;
+    font-size: 30px;
+    -webkit-appearance: button;
 }
