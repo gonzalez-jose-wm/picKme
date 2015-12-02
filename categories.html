@@ -4,37 +4,31 @@
         <link rel="stylesheet" type="text/css" href="categories.css">
         <meta charset="UTF-8">
         <title>picKme Categories</title>
-        <script>
-            function jobCategory() {
-                var mycategory = getElementById("myCategory");
-                document.getElementById("currentCat").value=mycategory.options[mylist.selectedIndex].text;
-            }
-        </script>
     </head>
     <body>
         <div id="backborder">
             <div id="main">
                 <div id="changeCat">
                     <form>
-                        <font size="6">You Looking At
+                        <font size="12">You Are Currently Looking At <br>
                         <select id="myCategory" onchange="jobCategory()">
-                            <option>Arts</option>
+                            <option>Art</option>
                             <option>Science</option>
                             <option>Law and Order</option>
                             <option>Manual Labor</option>
                             <option>Business</option>
                             <option>Minor/Unofficial</option>
                         </select>
-                        <font size="6">Currently
+                        <font size="12">Jobs
                     </form>
-                    <p><input type="text" id="currentCat" size="20"></p>
                 </div>
             </div>
             <div id="misc">
+                <div id="profileDiv">
+                    <div id="profileBorder">
 
-
-
-
+                    </div>
+                </div>
             </div>
         </div>
     </body>
