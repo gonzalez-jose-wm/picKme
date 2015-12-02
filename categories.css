@@ -1,0 +1,50 @@
+#backborder {
+    z-index: 1;
+    background-color: #70C1B3;
+    position: fixed;
+    top: 0;
+    bottom: 520px;
+    left: 0;
+    right: 0;
+}
+#vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+}
+#main {
+    z-index: 2;
+    background-color: #247BA0;
+    position: fixed;
+    top: 10px;
+    bottom: 530px;
+    left: 20px;
+    right: 20px;
+    border-radius: 20px;
+}
+#misc {
+    z-index: 3;
+    background-color: #B2DBBF;
+    position: fixed;
+    top: 205px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#changeCat {
+    position: relative;
+    right: 250px;
+    top: 30px;
+    text-align: center;
+}
+select {
+    padding: 10px;
+    font-size: 30px;
+    -webkit-appearance: button;
+}
+#profileBox {
+    background-color: white;
+    position:
+}
+#profileBorder {
+    position: fixed;
+}
