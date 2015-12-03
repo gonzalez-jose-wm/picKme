@@ -1,0 +1,24 @@
+nav{
+    text-align: center;
+    background-color: #247BA0;
+}
+#content{
+    text-align: left;
+    background-color: #B2DBBF;
+}
+body{
+    background-color: #FF1654;
+}
+li{
+    background-color: #F3FFBD;
+    display: inline;
+    padding: 8px;
+}
+div{
+    background-color: #70C1B3;
+    border: 3px solid #B2DBBF;
+    text-align: left;
+}
+header{
+    text-align: right;
+}
