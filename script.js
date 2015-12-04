@@ -40,7 +40,7 @@ function signin () {
 }
 function signup () {
 if (signUp2 == 0){
-    $('#clientsCTA').html("Email: <input type='text' id='email'><br> New Username: <input type='text' id='username'><br>New Password: <input type='password' id='password'><br>Confirm Password: <input type='password' id='password2'><br> <button onClick='signup()'>Sign Up!</button> <br> <div id='error'></div>");
+    $('#clientsCTA').html("Email: <input type='email' id='email'><br> New Username: <input type='text' id='username'><br>New Password: <input type='password' id='password'><br>Confirm Password: <input type='password' id='password2'><br> <button onClick='signup()'>Sign Up!</button> <br> <div id='error'></div>");
     signUp2 = 1;
     throw "error this!"
 }
