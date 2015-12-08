@@ -1,9 +1,19 @@
 $(document).ready(function() {
 
     setTimeout(function(){
-        $('#clientsCTA').slideToggle(800);
+        $('#grayBack').slideToggle(800);
+
+            $( "#sideLeft" ).fadeTo( "slow" , 0.5, function() {
+                // Animation complete.
+            });
+        $( "#sideRight" ).fadeTo( "slow" , 0.5, function() {
+            // Animation complete.
+        });
+
+
+
+
     }, 2000);
-    signUp2 = 0;
 
 });
 
@@ -98,7 +108,10 @@ if (signUp2 == 1){
         email2 =document.getElementById("password2");
         email2.style.backgroundColor = "";
     }
-
+}
 }
 
+
+function testing (){
+    $('#test').load('http://google.com');
 }

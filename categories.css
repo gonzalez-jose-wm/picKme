@@ -1,69 +1,36 @@
-#backborder {
-    z-index: 1;
-    background-color: #70C1B3;
-    position: fixed;
-    top: 0;
-    bottom: 520px;
-    left: 0;
-    right: 0;
-}
-#vertical-text {
-    transform: rotate(90deg);
-    transform-origin: left top 0;
-}
-#main {
-    z-index: 2;
-    background-color: #247BA0;
-    position: fixed;
-    top: 10px;
-    bottom: 530px;
-    left: 20px;
-    right: 20px;
-    border-radius: 20px;
-}
-#misc {
-    z-index: 3;
-    background-color: #B2DBBF;
-    position: fixed;
-    top: 205px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-#changeCat {
-    position: relative;
-    right: 250px;
-    top: 30px;
-    text-align: center;
-}
-select {
-    padding: 10px;
-    font-size: 30px;
-    -webkit-appearance: button;
-}
-#profileBox {
-    background-color: white;
-}
-#profileBorder {
-    position: fixed;
-}
-#clientsCTA {
-    z-index: 99; position: relative;
-    height: 400px;
-    color: #CCCCCC;
-    text-align:center;
-    font-size: 46px;
-    text-decoration: none;
-    width: 800px;
-    margin: auto;
-    background-color: darkslategray;
-    display: none;
-    padding-top: 10%;
-    padding-bottom: 10%;
 
+#grayBack {
+    display: none;
 }
 #error {
     font-size: 20px;
     color: red;
 }
 
+#sideLeft {
+    float: left;
+    width: 20%;
+    background-color: #e6b045;
+    display: none;
+    padding-bottom: 50%;
+}
+#sideRight{
+    float: left;
+    width: 20%;
+    background-color: #e6b045;
+    display: none;
+    padding-bottom: 50%;
+}
+#clientsCTA{
+    float: left;z-index: 99; position: relative;
+    height: 400px;
+    color: #CCCCCC;
+    text-align:center;
+    font-size: 46px;
+    text-decoration: none;
+    width: 60%;
+    margin: auto;
+    background-color: darkslategray;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}

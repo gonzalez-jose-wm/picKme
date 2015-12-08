@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <meta charset=utf-8 />
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="categories.css">
         <script src="jquery-2.1.4.min.js"></script>
@@ -10,31 +11,17 @@
     </head>
     <body>
 
-        <div id="backborder">
-            <div id="main">
-                <div id="changeCat">
-                    <form>
-                        <font size="12">You Are Currently Looking At <br>
-                        <select id="myCategory" onchange="jobCategory()">
-                            <option>Art</option>
-                            <option>Science</option>
-                            <option>Law and Order</option>
-                            <option>Manual Labor</option>
-                            <option>Business</option>
-                            <option>Minor/Unofficial</option>
-                        </select>
-                        <font size="12">Jobs
-                    </form>
-                </div>
-            </div>
-            <div id="misc">
-                <div id="profileDiv">
-                    <div id="profileBorder">
 
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="response"></div>
+    <script>
+        $(function(){
+            var contentURI= 'http://google.com';    // URL TO GRAB + # of any desired element // if needed :
+            $('#response').load('grabber.php?url='+ contentURI);
+        });
+    </script>
+
+        <div id="grayBack">
+            <div id="sideLeft"></div>
         <div id="clientsCTA">
         Username:
         <input type="text" id="username"><br>
@@ -44,8 +31,8 @@
             <button onClick="signup()">Sign Up</button>
         <br>
         <div id="error"></div>
-
-
-    </div>
+        </div>
+            <div id="sideRight"></div>
+        </div>
     </body>
 </html>
