@@ -12,16 +12,22 @@
     <body>
 
 
-    <div id="response"></div>
-    <script>
-        $(function(){
-            var contentURI= 'http://google.com';    // URL TO GRAB + # of any desired element // if needed :
-            $('#response').load('grabber.php?url='+ contentURI);
-        });
-    </script>
+    <div id="slideshow">
+        <div>
+            <img class="image" src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+        </div>
+        <div>
+            <img class="image" src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+        </div>
+        <div>
+            <img class="image" src="http://tanktroublewebsite.cabanova.com/files/hcmp-7d84fyk9pdsz-8gu4b.png">
+        </div>
+    </div>
+
+
 
         <div id="grayBack">
-            <div id="sideLeft"></div>
+            <div class="sides"></div>
         <div id="clientsCTA">
         Username:
         <input type="text" id="username"><br>
@@ -32,7 +38,7 @@
         <br>
         <div id="error"></div>
         </div>
-            <div id="sideRight"></div>
+            <div class="sides"></div>
         </div>
     </body>
 </html>

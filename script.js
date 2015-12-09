@@ -3,12 +3,10 @@ $(document).ready(function() {
     setTimeout(function(){
         $('#grayBack').slideToggle(800);
 
-            $( "#sideLeft" ).fadeTo( "slow" , 0.5, function() {
+            $( ".sides" ).fadeTo( "slow" , 0.5, function() {
                 // Animation complete.
             });
-        $( "#sideRight" ).fadeTo( "slow" , 0.5, function() {
-            // Animation complete.
-        });
+
 
 
 
@@ -115,3 +113,13 @@ if (signUp2 == 1){
 function testing (){
     $('#test').load('http://google.com');
 }
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+    $('#slideshow > div:first')
+        .slideDown(1000)
+        .next()
+        .slideUp(1000)
+        .end()
+        .appendTo('#slideshow');
+},  3000);
