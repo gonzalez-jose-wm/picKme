@@ -1,0 +1,118 @@
+#backborder {
+    z-index: 1;
+    background-color: red;
+    position: fixed;
+    top: 10px;
+    left: 500px;
+    right: 20px;
+    height: 170px;
+    border-radius: 20px;
+}
+#vertical-text {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+}
+#main {
+    z-index: 2;
+    background-color: #247BA0;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 1070px;
+    height: 45px;
+    border-radius: 20px;
+}
+#misc {
+    z-index: 3;
+    background-color: ;
+    position: fixed;
+    top: 205px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+#changeCat {
+    position: relative;
+    right: 180px;
+    top: 10px;
+    left: 40px;
+}
+#cateMenu {
+    padding: 0;
+    margin: 0;
+}
+ul#cateMenu li {
+    z-index: 4;
+    width: 125px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-right: 4px;
+}
+ul#cateMenu a {
+    text-decoration: none;
+    display: block;
+    width: 125px;
+    height: 20px;
+    line-height: 20px;
+    background-color: lightskyblue;
+    color: white;
+    border-radius: 10px
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul#cateMenu .sub1 a {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+ul#cateMenu li:hover > a {
+    background-color: green;
+}
+ul#cateMenu li:hover a:hover {
+    background-color: red;
+}
+ul#cateMenu .sub1 li{
+
+}
+ul#cateMenu ul.sub1 {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+ul#cateMenu li:hover .sub1 {
+    display: block;
+}
+select {
+    padding: 10px;
+    font-size: 15px;
+    -webkit-appearance: button;
+}
+#profileBox {
+    background-color: black;
+    position: fixed;
+    top: 205px;
+    bottom: 0;
+    right: 20px;
+    left: 20px;
+}
+#profBorder {
+    background-color: white;
+    border: 1px solid red;
+    position: fixed;
+    top: 205px;
+    right: 320px;
+    left: 20px;
+    bottom: 0;
+}
+table#cssTable tr {
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+p {
+    margin: 0;
+}
