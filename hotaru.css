@@ -1,0 +1,37 @@
+nav{
+    text-align: center;
+    background-color: #247BA0;
+    width:1000px;
+    height:20px;
+}
+#content{
+    text-align: left;
+    background-color: #B2DBBF;
+}
+body{
+    background-color: #FF1654;
+}
+li{
+    background-color: #F3FFBD;
+    display: inline;
+    padding: 5px;
+}
+header{
+    float: center;
+}
+div.data{
+    float: left;
+}
+div.class{
+    float: left;
+}
+
+h1.me{
+    text-align: left;
+}
+p.sasuke{
+    text-align: left;
+}
+ul.numberclearfix{
+    float:left;
+}
