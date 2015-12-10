@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="mainstyle.css">
-    <title>PickMe</title>
+    <link rel="stylesheet" type="text/css" href="categories.css">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="script.js"> </script>
+    <title>picKme</title>
 
 
 </head>
 <body>
+
+<div id="grayBack">
+    <div class="sides"></div>
+    <div id="clientsCTA">
+        Username:
+        <input type="text" id="username"><br>
+        Password:
+        <input type="text" id="password"><br>
+        <button onClick="signin()">Submit</button>
+        <button onClick="signup()">Sign Up</button>
+        <br>
+        <div id="error"></div>
+    </div>
+    <div class="sides"></div>
+</div>
+
 
 <header style="margin-top: 40px;">
     <nav>
