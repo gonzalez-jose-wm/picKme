@@ -4,14 +4,11 @@ $(document).ready(function() {
         $('#grayBack').slideToggle(800);
 
             $( ".sides" ).fadeTo( "slow" , 0.5, function() {
-                // Animation complete.
-            });
-
-
-
-
-
+            })
     }, 2000);
+
+    running = 0;
+    slideshow()
 
 });
 
@@ -109,17 +106,23 @@ if (signUp2 == 1){
 }
 }
 
+//Below is the slider javascript //
 
-function testing (){
-    $('#test').load('http://google.com');
-}
 $("#slideshow > div:gt(0)").hide();
 
-setInterval(function() {
+function slideshow() {
     $('#slideshow > div:first')
         .slideDown(1000)
         .next()
         .slideUp(1000)
         .end()
         .appendTo('#slideshow');
-},  3000);
+    if (running == 1) {
+        console.log("Don't do anything.")
+    }
+    if (running == 0) {
+        setInterval(slideshow, 2000);
+        running = 1;
+    }
+
+}

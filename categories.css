@@ -20,6 +20,15 @@
     padding-top: 10%;
     padding-bottom: 10%;
 }
+.sides {
+     float: left;
+     width: 20%;
+     background-color: rgba(32, 22, 11, 0.98);
+     display: none;
+     padding-bottom: 50%;
+ }
+/* above is the login/register css*/
+/* Below is the slider css */
 #slideshow {
     margin: 50px auto;
     position: relative;
@@ -27,7 +36,7 @@
     height: 400px;
     padding: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    display: none;
+
 }
 
 #slideshow > div {
@@ -40,11 +49,4 @@
 .image{
     height: 400px;
     width: 100%;
-}
-.sides {
-    float: left;
-    width: 20%;
-    background-color: rgba(32, 22, 11, 0.98);
-    display: none;
-    padding-bottom: 50%;
 }
