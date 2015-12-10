@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="script.js"> </script>
     <title>PickMe</title>
 
 
 </head>
 <body>
-
+<div id="grayBack">
+    <div class="sides"></div>
+    <div id="clientsCTA">
+        Username:
+        <input type="text" id="username"><br>
+        Password:
+        <input type="text" id="password"><br>
+        <button onClick="signin()">Submit</button>
+        <button onClick="signup()">Sign Up</button>
+        <br>
+        <div id="error"></div>
+    </div>
+    <div class="sides"></div>
+</div>
+<div class="jose">
 <header style="margin-top: 40px;">
     <nav>
         <img src="http://lcadd.org/manager/images/stories/admin_services/jobs.png" width="145" height="90" style="
@@ -27,6 +43,7 @@
         </div>
     </nav>
 </header>
+
 
 <div class="myDIV"></div>
 
@@ -70,7 +87,7 @@
         </div>
     </div>
 </div>
-
+</div>
 
 </body>
 </html>
