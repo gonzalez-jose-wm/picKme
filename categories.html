@@ -11,6 +11,20 @@
     </head>
     <body>
 
+    <div id="grayBack">
+        <div class="sides"></div>
+        <div id="clientsCTA">
+            Username:
+            <input type="text" id="username"><br>
+            Password:
+            <input type="text" id="password"><br>
+            <button onClick="signin()">Submit</button>
+            <button onClick="signup()">Sign Up</button>
+            <br>
+            <div id="error"></div>
+        </div>
+        <div class="sides"></div>
+    </div>
 
     <div id="slideshow" onclick="slideshow()">
         <div>
@@ -27,19 +41,6 @@
     <!-- Below is the Login/register page -->
 
 
-        <div id="grayBack">
-            <div class="sides"></div>
-        <div id="clientsCTA">
-        Username:
-        <input type="text" id="username"><br>
-        Password:
-        <input type="text" id="password"><br>
-        <button onClick="signin()">Submit</button>
-            <button onClick="signup()">Sign Up</button>
-        <br>
-        <div id="error"></div>
-        </div>
-            <div class="sides"></div>
-        </div>
+
     </body>
 </html>

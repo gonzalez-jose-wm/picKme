@@ -1,6 +1,9 @@
 
 #grayBack {
+    z-index: 98; position: relative;
     display: none;
+    float: left;
+    width: 100%;
 }
 #error {
     font-size: 20px;
@@ -8,7 +11,8 @@
 }
 
 #clientsCTA{
-    float: left;z-index: 99; position: relative;
+    float: left;
+    z-index: 99; position: relative;
     height: 400px;
     color: #CCCCCC;
     text-align:center;
@@ -30,6 +34,7 @@
 /* above is the login/register css*/
 /* Below is the slider css */
 #slideshow {
+    z-index: 10;
     margin: 50px auto;
     position: relative;
     width: 100%;

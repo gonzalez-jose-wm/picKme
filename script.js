@@ -6,7 +6,7 @@ $(document).ready(function() {
             $( ".sides" ).fadeTo( "slow" , 0.5, function() {
             })
     }, 2000);
-
+    signUp2 = 0;
     running = 0;
     slideshow()
 
@@ -19,7 +19,7 @@ function signin () {
 
     if (username.length > 0 && password.length > 0) {
         loggedIn = 1;
-        $('#clientsCTA').slideToggle(800)
+        $('#grayBack').slideToggle(800)
     }
     if (username.length > 0 && password.length == 0){
         email2 =document.getElementById("password");
@@ -57,7 +57,7 @@ if (signUp2 == 1){
     username = $('#username').val();
 
     if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0){
-        $('#clientsCTA').slideToggle(800);
+        $('#grayBack').slideToggle(800);
     }
     if (password.length == 0){
         email2 =document.getElementById("password");
