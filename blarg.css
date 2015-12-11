@@ -27,13 +27,17 @@ div.class{
 }
 
 h1.me{
-    text-align: left;
+    float: left;
 }
 p.sasuke{
     text-align: left;
 }
 ul.numberclearfix{
     float:left;
+}
+div.pic{
+    width: 255px;
+    height: 255px;
 }
 
 
