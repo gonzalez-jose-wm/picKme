@@ -1,3 +1,7 @@
+.jose {
+    position: absolute;
+    width: 100%;
+}
 
 body {
 
@@ -11,6 +15,7 @@ body {
     height: 350px;
     background-color:blue;
     box-shadow: 0px 3px #888888;
+
 }
 
 .start a {
@@ -37,6 +42,7 @@ body {
 
 
 /* buttons */
+
 .auth_button {
     height: 40px;
     line-height: 40px;
@@ -117,3 +123,39 @@ body {
     transition: background-color 500ms ease;
 }
 
+#grayBack {
+    z-index: 98; position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    height: 550px;
+}
+#error {
+    font-size: 20px;
+    color: red;
+}
+
+#clientsCTA{
+    float: left;
+    z-index: 97; position: relative;
+
+    color: #CCCCCC;
+    text-align:center;
+    font-size: 46px;
+    text-decoration: none;
+    width: 60%;
+    margin: auto;
+    background-color: darkslategray;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 550px;
+}
+.sides {
+    float: left;
+    width: 20%;
+    background-color: rgba(32, 22, 11, 0.98);
+    display: none;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 550px;
+}
