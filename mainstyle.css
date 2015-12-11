@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 .jose {
     position: absolute;
     width: 100%;
 }
+=======
+>>>>>>> 7675a64073dcc4ca854651761fe128504941f66a
 
 body {
 
@@ -18,10 +21,23 @@ body {
 
 }
 
-h1 {
-    text-align: center;
+.start a {
+    text-decoration: none;
     font-family: 'Lato', sans-serif;
+    color: #e2e2e2;
+    -webkit-text-stroke: 1px black;
+    font-size: 50px;
+
 }
+.start a:visited  {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: #e2e2e2;
+    -webkit-text-stroke: 1px black;
+    font-size: 50px;
+
+}
+
 
 /* buttons */
 
@@ -81,7 +97,7 @@ h1 {
 }
 
 .col-1 div{
-    height:80px;
+    height:70px;
     margin:10px;
     margin-bottom: 40px;
 }

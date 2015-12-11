@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
     setTimeout(function(){
         $('#grayBack').slideToggle(800);
 
@@ -12,12 +13,26 @@ $(document).ready(function() {
 });
 
 function signin () {
+=======
+
+    setTimeout(function(){
+        $('.clientsCTA').slideToggle(800);
+    }, 2000);
+
+
+
+
+});
+
+function submit () {
+>>>>>>> 7675a64073dcc4ca854651761fe128504941f66a
 
     username = $('#username').val();
     password = $('#password').val();
 
     if (username.length > 0 && password.length > 0) {
         loggedIn = 1;
+<<<<<<< HEAD
         $('#grayBack').slideToggle(800)
     }
     if (username.length > 0 && password.length == 0){
@@ -123,5 +138,25 @@ function slideshow() {
         setInterval(slideshow, 2000);
         running = 1;
     }
+=======
+        $('.clientsCTA').slideToggle(800)
+    }
+    if (username.length > 0 && password.length == 0){
+        $('#error').html("Password field can not be left blank.")
+
+    }
+    if (username.length == 0 && password.length > 0) {
+        $('#error').html("Username field can not be left blank.")
+    }
+    if (username.length == 0 && password.length == 0) {
+        $('#error').html("Username and password fields are required.")
+    }
+
+
+
+
+
+
+>>>>>>> 7675a64073dcc4ca854651761fe128504941f66a
 
 }
