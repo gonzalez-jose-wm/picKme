@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 .jose {
     position: absolute;
     width: 100%;
 }
-=======
->>>>>>> 7675a64073dcc4ca854651761fe128504941f66a
 
 body {
 
@@ -153,6 +150,7 @@ body {
     width: 20%;
     background-color: rgba(32, 22, 11, 0.98);
     display: none;
-    padding-bottom: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     height: 550px;
 }
