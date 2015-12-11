@@ -13,12 +13,45 @@ $(document).ready(function() {
 });
 
 function signin () {
+    username = $('#username').val();
+    password = $('#password').val();
+
+    if (username.length > 0 && password.length == 0){
+        email2 =document.getElementById("password");
+        email2.style.backgroundColor = "palegoldenrod";
+        email3 =document.getElementById("username");
+        email3.style.backgroundColor = "";
+        $('#error').html("Password field can not be left blank.")
+    }
+    if (username.length == 0 && password.length > 0) {
+        email2 =document.getElementById("username");
+        email2.style.backgroundColor = "palegoldenrod";
+        email3 =document.getElementById("password");
+        email3.style.backgroundColor = "";
+        $('#error').html("Username field can not be left blank.")
+    }
+    if (username.length == 0 && password.length == 0) {
+        email2 =document.getElementById("password");
+        email2.style.backgroundColor = "palegoldenrod";
+        email3 =document.getElementById("username");
+        email3.style.backgroundColor = "palegoldenrod";
+        $('#error').html("Username and password fields are required.")
+    }
+    if (username.length > 0 && password.length > 0) {
+        $('#grayBack').slideToggle(800)
+    }
+
+}
+
+
+function submit () {
 
     username = $('#username').val();
     password = $('#password').val();
 
     if (username.length > 0 && password.length > 0) {
         loggedIn = 1;
+
         $('#grayBack').slideToggle(800)
     }
     if (username.length > 0 && password.length == 0){
@@ -124,5 +157,12 @@ function slideshow() {
         setInterval(slideshow, 2000);
         running = 1;
     }
+
+
+
+
+
+
+
 
 }
