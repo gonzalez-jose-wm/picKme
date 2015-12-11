@@ -1,16 +1,24 @@
 $(document).ready(function() {
-
-    setTimeout(function(){
-        $('#grayBack').slideToggle(800);
-
-            $( ".sides" ).fadeTo( "slow" , 0.5, function() {
-            })
-    }, 2000);
+    starting = 1;
+    setTimeout(popup, 2000);
+    inText();
     signUp2 = 0;
     running = 0;
     slideshow()
 
 });
+function popup () {
+        $('#grayBack').slideToggle(800);
+        $( ".sides" ).fadeTo( "slow" , 0.5, function() {});
+
+}
+
+function inText () {
+    $("#clientsCTA").html('<br><br><br>Username: <input type="text" id="username"><br>Password: <input type="password" id="password"><br> <button onClick="signin()">Submit</button> <button onClick="upText()">Sign Up</button> <br> <div id="error"></div>')
+}
+function upText () {
+    $('#clientsCTA').html("Email: <input type='email' id='email'><br> New Username: <input type='text' id='username'><br>New Password: <input type='password' id='password'><br>Confirm Password: <input type='password' id='password2'><br> <button onClick='signup()'>Sign Up!</button> <br> <div id='error'></div>");
+}
 
 function signin () {
     username = $('#username').val();
@@ -77,12 +85,6 @@ function submit () {
     }
 }
 function signup () {
-if (signUp2 == 0){
-    $('#clientsCTA').html("Email: <input type='email' id='email'><br> New Username: <input type='text' id='username'><br>New Password: <input type='password' id='password'><br>Confirm Password: <input type='password' id='password2'><br> <button onClick='signup()'>Sign Up!</button> <br> <div id='error'></div>");
-    signUp2 = 1;
-    throw "error this!"
-}
-if (signUp2 == 1){
 
     password = $('#password').val();
     password2 = $('#password2').val();
@@ -136,7 +138,7 @@ if (signUp2 == 1){
         email2 =document.getElementById("password2");
         email2.style.backgroundColor = "";
     }
-}
+
 }
 
 //Below is the slider javascript //
