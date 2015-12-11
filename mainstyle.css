@@ -29,6 +29,11 @@ body {
     font-size: 50px;
 
 }
+.hover:hover {
+    background-color: #00cdff;
+    border:1px solid transparent;
+    transition: background-color 500ms ease;
+}
 
 
 /* buttons */
