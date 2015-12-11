@@ -1,18 +1,14 @@
 nav{
     text-align: center;
-    background-color: #247BA0;
-    width:1000px;
-    height:20px;
-}
-#content{
-    text-align: left;
-    background-color: #B2DBBF;
+    background-color: #70c1b3;
+    width: 1000px;
+    height: 35px;
 }
 body{
-    background-color: #FF1654;
+    background-color: #247ba0;
 }
 li{
-    background-color: #F3FFBD;
+    background-color: #f3ffbd;
     display: inline;
     padding: 5px;
 }
@@ -21,28 +17,28 @@ header{
 }
 div.data{
     float: left;
+    width: 255px;
+    height: 150px;
+    background-color: #FF1654;
 }
 div.class{
     float: left;
+    background-color: #b313ff;
 }
-
-h1.me{
-    text-align: left;
+div.pic{
+    width: 255px;
+    height: 255px;
+    background-color: #325aff;
 }
-p.sasuke{
-    text-align: left;
+div.gcontent{
+    width: 255px;
+    height: 155px;
+    background-color: #f3beff;
+    float: bottom;
 }
-ul.numberclearfix{
-    float:left;
+div.naruto{
+    width:550px;
+    float: right;
+    text-align: top;
+    background-color: #ddf3ff;
 }
-
-
-
-
-
-
-
-
-
-
-
