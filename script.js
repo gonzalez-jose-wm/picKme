@@ -1,10 +1,10 @@
 $(document).ready(function() {
     starting = 1;
+    slideshow();
     setTimeout(popup, 2000);
     inText();
     signUp2 = 0;
     running = 0;
-    slideshow()
 
 });
 function popup () {
