@@ -8,12 +8,13 @@ body{
     background-color: #247ba0;
 }
 li{
-    background-color: #f3ffbd;
+    background-color: #f1ffbb;
     display: inline;
     padding: 5px;
 }
-header{
-    float: center;
+#header{
+    float: right;
+    background-color: #247ba0;
 }
 div.data{
     float: left;
@@ -39,6 +40,11 @@ div.gcontent{
 div.naruto{
     width:550px;
     float: right;
-    text-align: top;
+    text-align: left;
     background-color: #ddf3ff;
+}
+#container{
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
 }
