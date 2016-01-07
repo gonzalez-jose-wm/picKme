@@ -5,7 +5,6 @@ nav{
     height: 35px;
 }
 body{
-    background-color: #247ba0;
     background-image: url("http://i.stack.imgur.com/l0JyZ.jpg");
 }
 li{
@@ -20,13 +19,17 @@ div.data{
     float: left;
     width: 255px;
     height: 150px;
+    border-style: double;
+    border-width: 8px;
 }
 div.class{
     float: left;
 }
 div.pic{
-    width: 255px;
-    height: 255px;
+    width: 300px;
+    height: 300px;
+    float: center;
+    background-color:lightblue;
 }
 div.gcontent{
     width: 255px;
@@ -34,12 +37,17 @@ div.gcontent{
     float: bottom;
 }
 div.naruto{
-    width:550px;
+    width:555px;
     float: right;
     text-align: left;
+    background-color: lightblue;
 }
 #container{
-    width:900px;
+    width: 1050px;
     margin-left: auto;
     margin-right: auto;
+}
+div.ma{
+    float: left;
+    height: 50px;
 }
