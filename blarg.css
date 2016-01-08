@@ -1,44 +1,53 @@
 nav{
     text-align: center;
-    background-color: #70c1b3;
+
     width: 1000px;
     height: 35px;
 }
 body{
-    background-color: #247ba0;
+    background-image: url("http://i.stack.imgur.com/l0JyZ.jpg");
 }
 li{
-    background-color: #f3ffbd;
     display: inline;
     padding: 5px;
 }
 header{
-    float: center;
+    text-align: right;
+
 }
 div.data{
     float: left;
     width: 255px;
     height: 150px;
-    background-color: #FF1654;
+    border-style: double;
+    border-width: 8px;
 }
 div.class{
     float: left;
-    background-color: #b313ff;
 }
 div.pic{
-    width: 255px;
-    height: 255px;
-    background-color: #325aff;
+    width: 300px;
+    height: 300px;
+    float: center;
+    background-color:lightblue;
 }
 div.gcontent{
     width: 255px;
     height: 155px;
-    background-color: #f3beff;
     float: bottom;
 }
 div.naruto{
-    width:550px;
+    width:555px;
     float: right;
-    text-align: top;
-    background-color: #ddf3ff;
+    text-align: left;
+    background-color: lightblue;
+}
+#container{
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.ma{
+    float: left;
+    height: 50px;
 }
