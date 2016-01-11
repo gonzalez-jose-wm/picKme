@@ -40,10 +40,22 @@ if ($result->num_rows > 0) {
 if ( ! empty($_POST['username'])){
     $name = ($_POST['username']);
     checkPass();
+}
+if (empty($_POST['username'])){
 
+    echo "<script type='text/javascript'>function popup () { $('#grayBack').slideToggle(800); $( '.sides' ).fadeTo( 'slow' , 0.5, function() {}); } popup();</script>";
 
 }
+
+if (empty($_POST['username'])){
+    checkPass();
+}
+
 function checkPass () {
+    global $used;
+    $used = 0;
+    global $foo;
+    $foo = 0;
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -62,49 +74,45 @@ $sql = "SELECT * FROM new_table";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
 
-    global $used;
-    if ($used == 'accepted!') {}
-    else {
+            $usrn = $row["id_field"];
+            $name = ($_POST['username']);
+            switch ($usrn) {
+                case ($usrn == $name):
+                    global $used;
+                    $used = "accepted!";
+                    break;
+                case ($usrn != $name):
+                    global $used;
+                    if ($used == "accepted!") {
 
-    }
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
+                    }
+                    else {
+                        $used = "denied!";
+                        while ($foo == 0) {
+                            echo "<script type='text/javascript'>function popup () { $('#grayBack').slideToggle(800); $( '.sides' ).fadeTo( 'slow' , 0.5, function() {});}</script>";
+                            echo "hi there";
+                            $foo = $foo +1 ;
+                            //add a ne variable outside this function instead of $foo
+                        }
 
-        $usrn = $row["id_field"];
-        $name = ($_POST['username']);
-        switch ($usrn) {
-            case ($usrn == $name):
-                global $used;
-                $used = "accepted!";
-                break;
-            case ($usrn != $name):
-                global $used;
-                if ($used == "accepted!") {
+                    }
 
-                }
-                else {
-                    $used = "denied!";
-                }
+                    break;
+            }
 
-                break;
         }
 
-    }
+    // output data of each row
 
-    global $used;
-    if ($used == "accepted!") {
-        echo "<script src='script.js'> signup(); alert('hi'); </script>";
-    }
 } else {
     echo "No results found in table.";
 }
-
-
 }
+
 $conn->close();
 ?>
-
 <div class="jose"> Your username has been <?php global $used; echo $used; ?>
 <div id="output"> Output here</div>
 </div>
