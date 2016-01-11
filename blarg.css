@@ -1,48 +1,57 @@
 nav{
     text-align: center;
-    background-color: #247BA0;
-    width:1000px;
-    height:20px;
-}
-#content{
-    text-align: left;
-    background-color: #B2DBBF;
+
+    width: 1000px;
+    height: 35px;
 }
 body{
-    background-color: #FF1654;
+    background-image: url("http://i.stack.imgur.com/l0JyZ.jpg");
+}
+nav{
+    background-color: #3babe6;
 }
 li{
-    background-color: #F3FFBD;
     display: inline;
-    padding: 5px;
+    padding: 4px;
+    color: black;
+}
+a{
+    color: black;
 }
 header{
-    float: center;
+    text-align: right;
+    height: auto;
+
 }
 div.data{
     float: left;
+    width: 250px;
+    height: 150px;
 }
 div.class{
     float: left;
 }
-
-h1.me{
-    text-align: left;
+div.pic {
+    width: 300px;
+    height: 250px;
+    float: left;
 }
-p.sasuke{
-    text-align: left;
+div.gcontent{
+    width: 255px;
+    height: 155px;
+    float: bottom;
 }
-ul.numberclearfix{
-    float:left;
+div.naruto{
+    width: 555px;
+    float: left;
+    text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
+#container{
+    width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.ma{
+    float: left;
+    height: 50px;
+}
