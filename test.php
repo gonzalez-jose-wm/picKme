@@ -41,21 +41,8 @@ if ( ! empty($_POST['username'])){
     $name = ($_POST['username']);
     checkPass();
 }
-if (empty($_POST['username'])){
-
-    echo "<script type='text/javascript'>function popup () { $('#grayBack').slideToggle(800); $( '.sides' ).fadeTo( 'slow' , 0.5, function() {}); } popup();</script>";
-
-}
-
-if (empty($_POST['username'])){
-    checkPass();
-}
 
 function checkPass () {
-    global $used;
-    $used = 0;
-    global $foo;
-    $foo = 0;
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -81,21 +68,15 @@ if ($result->num_rows > 0) {
             switch ($usrn) {
                 case ($usrn == $name):
                     global $used;
-                    $used = "accepted!";
+                    $used = "has already been taken.";
                     break;
                 case ($usrn != $name):
                     global $used;
-                    if ($used == "accepted!") {
+                    if ($used == "has already been taken.") {
 
                     }
                     else {
-                        $used = "denied!";
-                        while ($foo == 0) {
-                            echo "<script type='text/javascript'>function popup () { $('#grayBack').slideToggle(800); $( '.sides' ).fadeTo( 'slow' , 0.5, function() {});}</script>";
-                            echo "hi there";
-                            $foo = $foo +1 ;
-                            //add a ne variable outside this function instead of $foo
-                        }
+                        $used = "is available!";
 
                     }
 
@@ -113,7 +94,17 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-<div class="jose"> Your username has been <?php global $used; echo $used; ?>
+<form name='form' method='post'>
+"Email: <input type='email' id='email'><br>
+</form>
+    Name: <input type='text' name='username' id='name'><br/>
+
+New Username: <input type='text' id='username'><br>
+New Password: <input type='password' id='password'><br>
+Confirm Password: <input type='password' id='password2'><br>
+<button onClick='signup()'>Sign Up!</button> <br> <div id='error'>
+
+<div class="jose"> Your username <?php global $used; echo $used; ?>
 <div id="output"> Output here</div>
 </div>
 

@@ -93,7 +93,8 @@ function signup () {
     username = $('#username').val();
 
     if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0){
-        $('#grayBack').slideToggle(800);
+        alert("hi");
+    location.reload();
     }
     if (password.length == 0){
         email2 =document.getElementById("password");
