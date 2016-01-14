@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 
 if ( ! empty($_POST['username'])){
     $name = ($_POST['username']);
-    checkPass();
+    insertInfo();
 }
 
 function checkPass () {
@@ -60,24 +60,47 @@ function checkPass () {
 $sql = "SELECT * FROM new_table";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+    if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
 
-            $usrn = $row["id_field"];
-            $name = ($_POST['username']);
+            $usrn = $row["Username"];
+            $name = ($_POST['username2']);
+            $pass = ($_POST['password3']);
             switch ($usrn) {
                 case ($usrn == $name):
+                    $pass2= $row["Password"];
+                    echo "<script type='text/javascript'>alert('$pass');</script>";
+                    echo "<script type='text/javascript'>alert('$pass2');</script>";
                     global $used;
-                    $used = "has already been taken.";
+                    $used = "Username accepted!";
+
+
+
+
+
+                   if ($pass2 == $pass) {
+                       echo "<script type='text/javascript'>alert('victory');</script>";
+                       global $used3;
+                       $used3 = "Password accepted.";
+                   }
+                    else {
+                        global $used3;
+                        $used3 = "Password denied.";
+                    }
+
+
                     break;
                 case ($usrn != $name):
                     global $used;
-                    if ($used == "has already been taken.") {
+                    if ($used == "Username accepted!") {
+
+
+
+
 
                     }
                     else {
-                        $used = "is available!";
-
+                        $used = "Username is incorrect.";
                     }
 
                     break;
@@ -92,28 +115,70 @@ if ($result->num_rows > 0) {
 }
 }
 
+
+$conn->close();
+
+function insertInfo () {
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "mydb";
+
+
+// Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $name = ($_POST['username']);
+    $password = ($_POST['password']);
+    $email = ($_POST['email']);
+
+    $sql = 'INSERT INTO new_table ( Email, Username, Password ) VALUES ( ' . $email . ',' . $name . ',' . $password . ')';
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+$_POST['insert'] = null;
+    global $insert;
+    $insert = null;
+
+
+}
+
 $conn->close();
 ?>
-<form name='form' method='post'>
-"Email: <input type='email' id='email'><br>
+<form name='form' method='post' id="form">
+"Email: <input type='email' name="email" id='email'><br>
+New Username: <input type='text' name="username" id='username'><br>
+New Password: <input type='password' name='password' id='password'><br>
+Confirm Password: <input type='password' name='password2' id='password2'><br>
 </form>
-    Name: <input type='text' name='username' id='name'><br/>
+<button onClick='signup()'>Sign Up!</button> <br> <div id='error'> </div>
 
-New Username: <input type='text' id='username'><br>
-New Password: <input type='password' id='password'><br>
-Confirm Password: <input type='password' id='password2'><br>
-<button onClick='signup()'>Sign Up!</button> <br> <div id='error'>
 
-<div class="jose"> Your username <?php global $used; echo $used; ?>
-<div id="output"> Output here</div>
-</div>
+<br><br><br>
+<form name='form2' method='post' id="form2">
+    Username: <input type='text' name="username2" id='username2'><br>
+    Password: <input type='password' name='password3' id='password3'><br>
+</form> <button onClick="signin()"> Sign In </button><br> <div id='error'> </div>
 
-    <div id="grayBack">
-    <div class="sides"></div>
-    <div id="clientsCTA">
-    </div>
-    <div class="sides"></div>
-</div>
+<?php
+
+if ( ! empty($_POST['username2'])){
+    $name = ($_POST['username2']);
+    checkPass();
+}
+?>
+
+<div class="jose"> Your <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
+
+
 
 
 

@@ -19,8 +19,8 @@ function upText () {
 }
 
 function signin () {
-    username = $('#username').val();
-    password = $('#password').val();
+    username = $('#username2').val();
+    password = $('#password3').val();
 
     if (username.length > 0 && password.length == 0){
         email2 =document.getElementById("password");
@@ -44,12 +44,9 @@ function signin () {
         $('#error').html("Username and password fields are required.")
     }
     if (username.length > 0 && password.length > 0) {
-        $('#grayBack').slideToggle(800)
+        document.getElementById('form2').submit();
     }
 
-}
-function foo () {
-    alert("HI");
 }
 
 
@@ -92,9 +89,9 @@ function signup () {
     email = $('#email').val();
     username = $('#username').val();
 
+
     if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0){
-        alert("hi");
-    location.reload();
+        document.form.submit();
     }
     if (password.length == 0){
         email2 =document.getElementById("password");
@@ -142,3 +139,17 @@ function signup () {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
