@@ -23,23 +23,23 @@ function signin () {
     password = $('#password3').val();
 
     if (username.length > 0 && password.length == 0){
-        email2 =document.getElementById("password");
+        email2 =document.getElementById("password3");
         email2.style.backgroundColor = "palegoldenrod";
-        email3 =document.getElementById("username");
+        email3 =document.getElementById("username2");
         email3.style.backgroundColor = "";
         $('#error').html("Password field can not be left blank.")
     }
     if (username.length == 0 && password.length > 0) {
-        email2 =document.getElementById("username");
+        email2 =document.getElementById("username2");
         email2.style.backgroundColor = "palegoldenrod";
-        email3 =document.getElementById("password");
+        email3 =document.getElementById("password3");
         email3.style.backgroundColor = "";
         $('#error').html("Username field can not be left blank.")
     }
     if (username.length == 0 && password.length == 0) {
-        email2 =document.getElementById("password");
+        email2 =document.getElementById("password3");
         email2.style.backgroundColor = "palegoldenrod";
-        email3 =document.getElementById("username");
+        email3 =document.getElementById("username2");
         email3.style.backgroundColor = "palegoldenrod";
         $('#error').html("Username and password fields are required.")
     }
@@ -88,9 +88,11 @@ function signup () {
     password2 = $('#password2').val();
     email = $('#email').val();
     username = $('#username').val();
+    company = $('#company').val();
+    telephone = $('#tel').val();
 
 
-    if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0){
+    if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0 && company.length > 0){
         document.form.submit();
     }
     if (password.length == 0){
@@ -136,6 +138,18 @@ function signup () {
     if (password2.length > 0){
         email2 =document.getElementById("password2");
         email2.style.backgroundColor = "";
+    }
+    if (company.length == 0) {
+        email2 =document.getElementById("company");
+        email2.style.backgroundColor = "palegoldenrod";
+        $('#error').html("Company field can not be left blank.")
+
+    }
+    if (company.length > 0) {
+        email2 =document.getElementById("company");
+        email2.style.backgroundColor = "";
+        $('#error').html("")
+
     }
 
 }
