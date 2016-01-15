@@ -1,9 +1,8 @@
 $(document).ready(function() {
     starting = 1;
-    setTimeout(popup, 2000);
-    inText();
     signUp2 = 0;
     running = 0;
+    $()
 
 });
 function popup () {
@@ -18,19 +17,10 @@ function inText () {
 function upText () {
     $('#clientsCTA').html("Email: <input type='email' id='email'><br> <form name='form' method='post' action='test.php'>Name: <input type='text' name='username' id='name'><br/> <input type='submit' name='submit' value='Submit'> </form> New Username: <input type='text' id='username'><br>New Password: <input type='password' id='password'><br>Confirm Password: <input type='password' id='password2'><br> <button onClick='signup()'>Sign Up!</button> <br> <div id='error'></div>");
 }
-function checkPass2() {
-    //Run php function checkPass();
 
-
-
-
-
-
-
-}
 function signin () {
-    username = $('#username').val();
-    password = $('#password').val();
+    username = $('#username2').val();
+    password = $('#password3').val();
 
     if (username.length > 0 && password.length == 0){
         email2 =document.getElementById("password");
@@ -54,7 +44,7 @@ function signin () {
         $('#error').html("Username and password fields are required.")
     }
     if (username.length > 0 && password.length > 0) {
-        $('#grayBack').slideToggle(800)
+        document.getElementById('form2').submit();
     }
 
 }
@@ -99,8 +89,9 @@ function signup () {
     email = $('#email').val();
     username = $('#username').val();
 
+
     if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0){
-        $('#grayBack').slideToggle(800);
+        document.form.submit();
     }
     if (password.length == 0){
         email2 =document.getElementById("password");
@@ -148,3 +139,17 @@ function signup () {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
