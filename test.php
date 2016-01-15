@@ -70,11 +70,10 @@ $result = $conn->query($sql);
             switch ($usrn) {
                 case ($usrn == $name):
                     $pass2= $row["Password"];
-                    echo "<script type='text/javascript'>alert('$pass');</script>";
-                    echo "<script type='text/javascript'>alert('$pass2');</script>";
+
                     global $used;
                     $used = "Username accepted!";
-                    header('Location: main.html');
+
 
 
 
@@ -83,6 +82,7 @@ $result = $conn->query($sql);
                    if ($pass2 == $pass) {
                        echo "<script type='text/javascript'>alert('victory');</script>";
                        global $used3;
+                       header('Location: main.html');
                        $used3 = "Password accepted.";
                    }
                     else {
@@ -145,6 +145,7 @@ function insertInfo () {
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
+        header('Location: main.html');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -156,17 +157,7 @@ $_POST['insert'] = null;
 }
 
 $conn->close();
-?>
 
-
-
-<br><br><br>
-<form name='form2' method='post' id="form2">
-    Username: <input type='text' name="username2" id='username2'><br>
-    Password: <input type='password' name='password3' id='password3'><br>
-</form> <button onClick="signin()"> Sign In </button><br>  <!-- <div id='error'> </div> -->
-
-<?php
 
 if ( ! empty($_POST['username2'])){
     $name = ($_POST['username2']);
@@ -186,12 +177,46 @@ if ( ! empty($_POST['username2'])){
     <title>picKme</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <style type="text/css">
+        #jose {
+            font-size: 20px;
+            color: red;
+            text-align: right;
+            padding-top: 10px;
+        }
     </style>
 
 
 
 
 </head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="main.html"><img src="Screen%20Shot%202016-01-15%20at%202.11.31%20PM.png" width="115px" height=55px" style="border-radius: 8px;"></a>
+
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <form name='form2' method='post' id="form2" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type='text' name="username2" id='username2' placeholder="Username" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type='password' name='password3' id='password3' placeholder="Password" class="form-control">
+
+                </div>
+
+
+                <button class="btn btn-success"> Sign In </button>
+                <a href="test.php" class="btn btn-warning" type="submit" role="button">Sign up</a>
+
+            </form>
+            <div id="jose"> Your <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
+        </div>
+    </div>
+</nav>
 <div class="container">
 
     <form name='form' method='post' id="form">
