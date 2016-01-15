@@ -7,14 +7,51 @@
     <title>picKme</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <style type="text/css">
+        body{
+            padding-top: 50px;
+            padding-bottom: 20px;
+            background-image: url("congruent_outline.png");
+        }
+        .postion {
+            padding-top: 20px;
+        }
     </style>
 
 
 
 
 </head>
-<div class="container">
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="main.html"><img src="Screen%20Shot%202016-01-15%20at%202.11.31%20PM.png" width="115px" height=55px" style="border-radius: 8px;"></a>
+
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-success">Sign in</button>
+
+                <a href="login-signup.html" class="btn btn-warning" type="submit" role="button">Sign up</a>
+
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="postion">
+
+
+<div class="container">
+<div class="jumbotron">
     <form role="form">
         <div class="row setup-content" id="step-1">
 
@@ -87,7 +124,7 @@
                                         <p class="help-block ">Help us give you better support.</p>
                                     </div>
                                 </div>
-
+                                <a href="main.html"> <h7> Have a account?</h7> </a>
                             </div>
 
 
@@ -104,30 +141,7 @@
         </div>
         </form>
     </div>
-
-
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
+</div>
 </div>
 
 
