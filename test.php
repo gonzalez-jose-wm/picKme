@@ -72,7 +72,7 @@ $result = $conn->query($sql);
                     $pass2= $row["Password"];
 
                     global $used;
-                    $used = "Username accepted!";
+                    $used = "Your Username was accepted!";
 
 
 
@@ -83,18 +83,18 @@ $result = $conn->query($sql);
                        echo "<script type='text/javascript'>alert('victory');</script>";
                        global $used3;
                        header('Location: main.html');
-                       $used3 = "Password accepted.";
+                       $used3 = "Your Password accepted.";
                    }
                     else {
                         global $used3;
-                        $used3 = "Password denied.";
+                        $used3 = "<br> Your Password was denied.";
                     }
 
 
                     break;
                 case ($usrn != $name):
                     global $used;
-                    if ($used == "Username accepted!") {
+                    if ($used == "Your Username was accepted!") {
 
 
 
@@ -102,7 +102,7 @@ $result = $conn->query($sql);
 
                     }
                     else {
-                        $used = "Username is incorrect.";
+                        $used = "Your Username is incorrect.";
                     }
 
                     break;
@@ -140,8 +140,10 @@ function insertInfo () {
     $email = ($_POST['email']);
     $company = ($_POST['company']);
     $telephone = ($_POST['tel']);
+    $address = ($_POST['address']);
 
-    $sql = 'INSERT INTO new_table ( Email, Username, Password, Company, Telephone ) VALUES ( ' . $email . ',' . $name . ',' . $password . ',' . $company . ',' . $telephone . ')';
+
+    $sql = 'INSERT INTO new_table ( Email, Username, Password, Company, Telephone, Address ) VALUES ( ' . $email . ',' . $name . ',' . $password . ',' . $company . ',' . $telephone . ',' . $address . ')';
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
@@ -165,7 +167,7 @@ if ( ! empty($_POST['username2'])){
 }
 ?>
 
-<div class="jose"> Your <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
+<div class="jose">  <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
 
 
 
@@ -213,7 +215,7 @@ if ( ! empty($_POST['username2'])){
                 <a href="test.php" class="btn btn-warning" type="submit" role="button">Sign up</a>
 
             </form>
-            <div id="jose"> Your <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
+            <div id="jose"> <?php global $used; echo $used; ?><?php global $used3; echo $used3; ?></div>
         </div>
     </div>
 </nav>
@@ -285,15 +287,25 @@ if ( ! empty($_POST['username2'])){
                                     </div>
                                 </div>
 
+
                                 <div class="control-group">
-                                    <!-- Password -->
-                                    <label class="control-label" for="password_confirm">Telephone (optional)</label>
+                                    <!-- Username -->
+
+                                    <label class="control-label" for="username">Telephone (optional)</label>
                                     <div class="controls">
-                                        <input type="password" id="tel" placeholder=" " class="input-xlarge " name="tel">
-                                        <p class="help-block ">Help us give you better support.</p>
+                                        <input type='text' name="tel" id='tel' placeholder="" class="input-xlarge">
+                                        <span class="help-block">Help us give you better support.</span>
                                     </div>
                                 </div>
-                                <div id='error'><p> Things here</p> </div>
+                                <div class="control-group">
+                                    <!-- Password-->
+                                    <label class="control-label" for="address">The address of the company</label>
+                                    <div class="controls">
+                                        <input type="text" id="address" name="address" class="input-xlarge">
+                                        <p class="help-block">Where are you located?</p>
+                                    </div>
+                                </div>
+                                <div id='error'><p> </p> </div>
                             </div>
                         </fieldset>
                     </div>
@@ -304,30 +316,6 @@ if ( ! empty($_POST['username2'])){
     <button class="btn btn-primary nextBtn btn-lg pull-right " type="button" onClick='signup()'>Done!</button>
 </div>
 
-
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-
-    </div>
-</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

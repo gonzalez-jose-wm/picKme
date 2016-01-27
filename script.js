@@ -90,6 +90,7 @@ function signup () {
     username = $('#username').val();
     company = $('#company').val();
     telephone = $('#tel').val();
+    address = $('#address').val();
 
 
     if (password == password2 && email.length > 5 && username.length > 0 && password.length > 0 && company.length > 0){
@@ -151,6 +152,31 @@ function signup () {
         $('#error').html("")
 
     }
+    if (address.length == 0) {
+        email2 =document.getElementById("address");
+        email2.style.backgroundColor = "palegoldenrod";
+        $('#error').html("Address field can not be left blank.")
+
+    }
+    if (address.length > 0) {
+        email2 =document.getElementById("address");
+        email2.style.backgroundColor = "";
+        $('#error').html("")
+
+    }
+    if (telephone.length == 10) {
+        email2 =document.getElementById("tel");
+        email2.style.backgroundColor = "";
+        $('#error').html("")
+
+    }
+    if (telephone.length != 10) {
+        email2 =document.getElementById("tel");
+        email2.style.backgroundColor = "palegoldenrod";
+        $('#error').html("Please enter a real telephone number.")
+
+    }
+
 
 }
 
